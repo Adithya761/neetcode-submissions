@@ -1,0 +1,18 @@
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& dig) {
+       int n = dig.size();
+       int c = 1;
+       for(int i = n-1;i>= 0;i--){
+            if(dig[i] < 9){
+                dig[i]++;
+                return dig;
+            }
+            else{
+                dig[i] = 0;
+            }
+       }
+        dig.insert(dig.begin(), 1);
+       return dig;
+    }
+};
